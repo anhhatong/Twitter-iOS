@@ -31,6 +31,11 @@ class HomeTableViewController: UITableViewController {
         homeTableView.refreshControl = self.myRefreshControl;
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        self.loadTweets()
+    }
+    
     @objc func loadTweets() {
         self.numTweets = 10;
         let myParams = ["count": self.numTweets];
