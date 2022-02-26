@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Trw-7c-gy6">
-    <device id="retina6_5" orientation="portrait" appearance="light"/>
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="StR-Gt-ybL">
-                                <rect key="frame" x="117.66666666666669" y="523" width="179" height="47"/>
+                                <rect key="frame" x="117.5" y="523" width="179" height="47"/>
                                 <color key="backgroundColor" red="0.11372549019607843" green="0.63137254901960782" blue="0.94901960784313721" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="47" id="hu3-e3-9rV"/>
@@ -68,27 +68,27 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="HomeTableViewCell" rowHeight="150" id="Ucb-j9-577" customClass="HomeTableViewCell" customModule="Twitter" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="44.666666030883789" width="414" height="150"/>
+                                <rect key="frame" x="0.0" y="44.5" width="414" height="150"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Ucb-j9-577" id="1Jo-SY-866">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="150"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="x0k-JB-i29">
-                                            <rect key="frame" x="20" y="23.666666666666671" width="65" height="65"/>
+                                            <rect key="frame" x="20" y="23.5" width="65" height="65"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="65" id="FUd-RB-Fat"/>
                                                 <constraint firstAttribute="width" constant="65" id="HdL-lU-5rj"/>
                                             </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wQN-Ob-FAo">
-                                            <rect key="frame" x="93" y="23.666666666666671" width="301" height="24"/>
+                                            <rect key="frame" x="93" y="23.5" width="301" height="24"/>
                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gj8-Ad-DPg">
-                                            <rect key="frame" x="93" y="51.666666666666664" width="301" height="19.666666666666664"/>
+                                            <rect key="frame" x="93" y="51.5" width="301" height="20"/>
                                             <fontDescription key="fontDescription" type="system" weight="light" pointSize="16"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -158,7 +158,7 @@
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Tweet" style="plain" id="wnV-Aa-WRW">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="qRh-Ik-6Ny">
-                                <rect key="frame" x="302" y="4.6666666666666679" width="92" height="35"/>
+                                <rect key="frame" x="302" y="4.5" width="92" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
@@ -187,26 +187,34 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Tweeting..." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="UU7-bU-A0F">
-                                <rect key="frame" x="16" y="104" width="382" height="167"/>
+                                <rect key="frame" x="16" y="104" width="382" height="255"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <color key="textColor" systemColor="labelColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HQP-tM-Mju">
+                                <rect key="frame" x="398" y="375" width="0.0" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="HmV-Ue-kYU"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="HmV-Ue-kYU" firstAttribute="trailing" secondItem="UU7-bU-A0F" secondAttribute="trailing" constant="16" id="0ux-ng-Ta4"/>
-                            <constraint firstItem="UU7-bU-A0F" firstAttribute="top" secondItem="HmV-Ue-kYU" secondAttribute="top" constant="16" id="UlL-wb-WHW"/>
-                            <constraint firstItem="UU7-bU-A0F" firstAttribute="leading" secondItem="HmV-Ue-kYU" secondAttribute="leading" constant="16" id="q2F-Wd-WS4"/>
-                            <constraint firstItem="HmV-Ue-kYU" firstAttribute="bottom" secondItem="UU7-bU-A0F" secondAttribute="bottom" constant="591" id="yyi-bQ-MkW"/>
+                            <constraint firstItem="HQP-tM-Mju" firstAttribute="top" secondItem="UU7-bU-A0F" secondAttribute="bottom" constant="16" id="1fe-Yf-3gt"/>
+                            <constraint firstItem="HmV-Ue-kYU" firstAttribute="trailing" secondItem="UU7-bU-A0F" secondAttribute="trailing" constant="16" id="7aj-dg-Oez"/>
+                            <constraint firstItem="UU7-bU-A0F" firstAttribute="top" secondItem="HmV-Ue-kYU" secondAttribute="top" constant="16" id="PfJ-DR-v4a"/>
+                            <constraint firstAttribute="trailing" secondItem="HQP-tM-Mju" secondAttribute="trailing" constant="16" id="diE-ql-I8q"/>
+                            <constraint firstItem="UU7-bU-A0F" firstAttribute="leading" secondItem="HmV-Ue-kYU" secondAttribute="leading" constant="16" id="oJz-hk-hia"/>
+                            <constraint firstItem="HmV-Ue-kYU" firstAttribute="bottom" secondItem="UU7-bU-A0F" secondAttribute="bottom" constant="503" id="vZS-5q-orQ"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="yxM-u8-jis">
                         <barButtonItem key="leftBarButtonItem" style="plain" id="Euv-5u-Cia">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="NIh-cD-aVw">
-                                <rect key="frame" x="20" y="4.6666666666666679" width="92" height="35"/>
+                                <rect key="frame" x="20" y="4.5" width="92" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
@@ -218,7 +226,7 @@
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" style="plain" id="3J7-22-Z0L">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="6Xp-3j-YiV">
-                                <rect key="frame" x="302" y="4.6666666666666679" width="92" height="35"/>
+                                <rect key="frame" x="302" y="4.5" width="92" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
@@ -230,6 +238,8 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="charCountLabel" destination="HQP-tM-Mju" id="APD-Bj-cH3"/>
+                        <outlet property="tweetBarButton" destination="3J7-22-Z0L" id="aPf-na-R4O"/>
                         <outlet property="tweetText" destination="UU7-bU-A0F" id="6oy-v1-iZ8"/>
                     </connections>
                 </viewController>
@@ -304,7 +314,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="TwitterLogoBlue" width="133.33332824707031" height="133.33332824707031"/>
+        <image name="TwitterLogoBlue" width="200" height="200"/>
         <image name="favor-icon" width="30" height="30"/>
         <image name="retweet-icon" width="30" height="30"/>
         <systemColor name="labelColor">

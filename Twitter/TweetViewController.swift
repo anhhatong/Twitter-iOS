@@ -8,14 +8,23 @@
 
 import UIKit
 
-class TweetViewController: UIViewController {
+class TweetViewController: UIViewController, UITextViewDelegate {
 
     @IBOutlet weak var tweetText: UITextView!
     
+    @IBOutlet weak var charCountLabel: UILabel!
+    
+    let MAX_CHAR = 280;
+    var remainingCount = 280;
+    
     override func viewDidLoad() {
         super.viewDidLoad();
+        tweetText.delegate = self;
         tweetText.becomeFirstResponder();
+        charCountLabel.text = String(MAX_CHAR);
     }
+    
+    @IBOutlet weak var tweetBarButton: UIBarButtonItem!
     
     @IBAction func cancelButton(_ sender: Any) {
         self.dismiss(animated: true);
@@ -32,6 +41,31 @@ class TweetViewController: UIViewController {
         }, failure: {(Error) in print("Tweeting failed!")})
     }
     
+    // textView.text! is the prev string excluding the current char
+    // text is the current char
+    func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
+        // Construct what the new text would be if we allowed the user's latest edit
+        let newText = NSString(string: textView.text!).replacingCharacters(in: range, with: text)
+        self.remainingCount = MAX_CHAR - newText.count
+        charCountLabel.text = String(self.remainingCount);
+        
+       // Always allow users to type
+        return true
+    }
+    
+    // called when text field changes
+    func textViewDidChange(_ textView: UITextView) {
+        if (self.remainingCount < 0) {
+            charCountLabel.textColor = UIColor.red;
+            textView.textColor = UIColor.red;
+            tweetBarButton.isEnabled = false;
+        } else {
+            charCountLabel.textColor = UIColor.black;
+            textView.textColor = UIColor.black;
+            tweetBarButton.isEnabled = true;
+        }
+    }
+        
     /*
     // MARK: - Navigation
 
