@@ -72,6 +72,8 @@ class HomeTableViewController: UITableViewController {
         let username = user["name"] as! String;
         let profileUrl = URL(string: user["profile_image_url_https"] as! String)
         let data = try? Data(contentsOf: profileUrl!)
+        let favorited = tweet["favorited"] as! Bool;
+        let tweetID = tweet["id"] as! Int;
         
         if let imageData = data {
             cell.profileImage.image = UIImage(data: imageData)
@@ -79,6 +81,8 @@ class HomeTableViewController: UITableViewController {
         
         cell.username.text = username;
         cell.tweetContent.text = content;
+        cell.setFavorite(isFavorited: favorited)
+        cell.tweetID = tweetID;
 
         return cell
     }
