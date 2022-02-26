@@ -73,6 +73,7 @@ class HomeTableViewController: UITableViewController {
         let profileUrl = URL(string: user["profile_image_url_https"] as! String)
         let data = try? Data(contentsOf: profileUrl!)
         let favorited = tweet["favorited"] as! Bool;
+        let retweeted = tweet["retweeted"] as! Bool
         let tweetID = tweet["id"] as! Int;
         
         if let imageData = data {
@@ -82,6 +83,7 @@ class HomeTableViewController: UITableViewController {
         cell.username.text = username;
         cell.tweetContent.text = content;
         cell.setFavorite(isFavorited: favorited)
+        cell.setRetweeted(isRetweeted: retweeted)
         cell.tweetID = tweetID;
 
         return cell
